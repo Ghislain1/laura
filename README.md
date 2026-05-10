@@ -24,20 +24,21 @@
 - **Contact & Ordering** — WhatsApp integration and email contact form
 - **FAQ Accordion** — Expandable Q&A section
 - **Responsive** — Mobile-first layout with full-width sections
+- **Spy on Scroll**  — Scroll spy highlights the active navbar item
 
 ## Sections
 
-| Section | Description |
-|---|---|
-| Hero | Full-screen with background animation, stats, and CTAs |
-| Menu | Product grid with category filters, detail modals, and add-to-cart |
-| About | Brand story with highlights |
-| Delivery | Zone pricing table and WhatsApp CTA |
-| Hours | Time slot booking |
-| Testimonials | Customer reviews carousel |
-| FAQ | Accordion with common questions |
-| Contact | Contact form with WhatsApp/email options |
-| Cart | Slide-out drawer with checkout flow |
+| Section      | Description                                                        |
+| ------------ | ------------------------------------------------------------------ |
+| Hero         | Full-screen with background animation, stats, and CTAs             |
+| Menu         | Product grid with category filters, detail modals, and add-to-cart |
+| About        | Brand story with highlights                                        |
+| Delivery     | Zone pricing table and WhatsApp CTA                                |
+| Hours        | Time slot booking                                                  |
+| Testimonials | Customer reviews carousel                                          |
+| FAQ          | Accordion with common questions                                    |
+| Contact      | Contact form with WhatsApp/email options                           |
+| Cart         | Slide-out drawer with checkout flow                                |
 
 ## Getting Started
 

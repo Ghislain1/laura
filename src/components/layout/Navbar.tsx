@@ -1,7 +1,7 @@
 ﻿import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ShoppingCart, Menu, X, Flame, Globe } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useCart } from '../../hooks/useCart';
 import { cn } from '../../lib/utils';
 
@@ -12,16 +12,40 @@ const navLinks = [
   { key: 'contact', href: '#contact' },
 ];
 
+const sectionIds = navLinks.map((l) => l.href.slice(1));
+
 export function Navbar() {
   const { t, i18n } = useTranslation();
   const { itemCount, openCart } = useCart();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [active, setActive] = useState('');
+
+  const onScroll = useCallback(() => setScrolled(window.scrollY > 50), []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, [onScroll]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: '-120px 0px -50% 0px' }
+    );
+
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleLang = () => {
@@ -43,7 +67,7 @@ export function Navbar() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-(--main-color)">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-(--color-main)">
               <Flame className="h-5 w-5 text-black" />
             </div>
             <span className="font-display text-2xl tracking-wide text-white">
@@ -56,7 +80,12 @@ export function Navbar() {
               <a
                 key={link.key}
                 href={link.href}
-                className="text-sm font-medium text-[hsl(0_0%_65%)] transition-colors hover:text-white"
+                className={cn(
+                  'text-sm font-medium transition-colors',
+                  active === link.key
+                    ? 'text-(--color-main)'
+                    : 'text-[hsl(0_0%_65%)] hover:text-white'
+                )}
               >
                 {t('nav.' + link.key)}
               </a>
@@ -124,7 +153,12 @@ export function Navbar() {
                   key={link.key}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-base font-medium text-[hsl(0_0%_65%)] transition-colors hover:bg-[hsl(0_0%_10%)] hover:text-white"
+                  className={cn(
+                    'rounded-lg px-4 py-3 text-base font-medium transition-colors',
+                    active === link.key
+                      ? 'text-(--color-main) bg-[hsl(0_0%_10%)]'
+                      : 'text-[hsl(0_0%_65%)] hover:bg-[hsl(0_0%_10%)] hover:text-white'
+                  )}
                 >
                   {t('nav.' + link.key)}
                 </a>
