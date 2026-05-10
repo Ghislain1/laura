@@ -19,8 +19,8 @@ function App() {
       <div className="min-h-screen bg-[hsl(0_0%_4%)] text-[hsl(0_0%_97%)]">
         <Navbar />
         <main>
-          <Hero />
           <AnnouncementBar />
+          <Hero />
           <Menu />
           <About />
           <Delivery />

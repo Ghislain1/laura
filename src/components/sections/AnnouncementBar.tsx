@@ -16,7 +16,7 @@ export function AnnouncementBar() {
   const doubled = [...items, ...items];
 
   return (
-    <div className="overflow-hidden border-y border-[hsl(0_0%_15%)] bg-[hsl(0_0%_6%)] py-3">
+    <div className="overflow-hidden border-y border-[hsl(0_0%_15%)]  pt-12">
       <div className="flex animate-[marquee_22s_linear_infinite]" style={{ width: 'max-content' }}>
         {doubled.map((text, i) => (
           <span key={i} className="flex items-center gap-3 px-8 text-sm font-medium text-[hsl(0_0%_65%)] whitespace-nowrap">
