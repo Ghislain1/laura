@@ -4,6 +4,7 @@ import { FadeIn, SectionBadge } from '../effects/FadeIn';
 
 export function About() {
   const { t } = useTranslation();
+  const about_bg = "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=85"
 
   const stats = [
     { value: t('about.stat1_value'), label: t('about.stat1_label') },
@@ -22,8 +23,7 @@ export function About() {
             <div
               className="absolute inset-0 rounded-3xl bg-cover bg-center"
               style={{
-                backgroundImage:
-                  'url(https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=85)',
+                backgroundImage: `url(${about_bg})`,
               }}
             />
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[hsl(0_0%_4%/0.5)] to-transparent" />

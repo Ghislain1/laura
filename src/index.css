@@ -8,7 +8,8 @@
   --color-charcoal-light: hsl(0 0% 16%);
   --color-smoke: hsl(0 0% 17%);
   --color-cream: hsl(0 0% 97%);
-  --color-main: hsl(360 80% 50%);
+  --color-main: hsl(60 80% 50%);
+  --color-special: hsl(24 100% 50%);
 
   /* Semantic Tokens */
   --color-background: hsl(0 0% 4%);

@@ -57,7 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_10%)] via-transparent to-transparent" />
           {product.popular && (
-            <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-(--color-main) px-2.5 py-1 text-xs font-semibold text-black">
+            <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-(--color-special) px-2.5 py-1 text-xs font-semibold text-white">
               <Flame className="h-3 w-3" />
               {t('menu.popular')}
             </div>
