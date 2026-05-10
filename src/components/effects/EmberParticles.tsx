@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+﻿import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 interface Ember {
@@ -7,32 +7,33 @@ interface Ember {
   size: number;
   duration: number;
   delay: number;
+  xDrift: number;
   color: string;
 }
 
-export function EmberParticles({ count = 18 }: { count?: number }) {
-  const [embers, setEmbers] = useState<Ember[]>([]);
+const COLORS = [
+  'hsl(24 100% 50%)',
+  'hsl(354 79% 46%)',
+  'hsl(38 100% 55%)',
+  'hsl(14 100% 55%)',
+];
 
-  useEffect(() => {
-    const colors = [
-      'hsl(24 100% 50%)',
-      'hsl(354 79% 46%)',
-      'hsl(38 100% 55%)',
-      'hsl(14 100% 55%)',
-    ];
-    const h = window.innerHeight;
-    setEmbers(
-      Array.from({ length: count }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        size: Math.random() * 4 + 2,
-        duration: Math.random() * 3 + 2.5,
-        delay: Math.random() * 4,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        travelY: h * 0.7,
-      }))
-    );
-  }, [count]);
+function createEmbers(count: number): Ember[] {
+  const h = window.innerHeight;
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    size: Math.random() * 4 + 2,
+    duration: Math.random() * 3 + 2.5,
+    delay: Math.random() * 4,
+    xDrift: (Math.random() - 0.5) * 80,
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    travelY: h * 0.7,
+  }));
+}
+
+export function EmberParticles({ count = 18 }: { count?: number }) {
+  const embers = useMemo(() => createEmbers(count), [count]);
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -49,7 +50,7 @@ export function EmberParticles({ count = 18 }: { count?: number }) {
           }}
           animate={{
             y: [0, -400],
-            x: [0, (Math.random() - 0.5) * 80],
+            x: [0, ember.xDrift],
             opacity: [0, 1, 0.8, 0],
             scale: [1, 1.2, 0.4],
           }}

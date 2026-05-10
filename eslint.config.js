@@ -19,6 +19,7 @@ export default tseslint.config(
         rules: {
             ...react.configs.recommended.rules,
             ...reactHooks.configs.recommended.rules,
+            'react/react-in-jsx-scope': 'off',
         },
         settings: {
             react: { version: 'detect' },
@@ -26,5 +27,9 @@ export default tseslint.config(
     },
     {
         ignores: ['dist/**', 'node_modules/**'],
+    },
+    {
+        files: ['**/*.js', '**/*.cjs', '**/*.mjs', '**/vite.config.ts'],
+        ...tseslint.configs.disableTypeChecked,
     }
 );

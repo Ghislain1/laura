@@ -43,11 +43,11 @@ export function Navbar() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[hsl(24_100%_50%)]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-(--main-color)">
               <Flame className="h-5 w-5 text-black" />
             </div>
             <span className="font-display text-2xl tracking-wide text-white">
-              L-<span className="text-[hsl(24_100%_50%)]">Cuisine</span>
+              L-<span className="text-(--color-main)">Cuisine</span>
             </span>
           </a>
 
@@ -94,14 +94,14 @@ export function Navbar() {
 
             <a
               href="#menu"
-              className="hidden rounded-full bg-[hsl(24_100%_50%)] px-5 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 md:block"
+              className="hidden rounded-full bg-(--color-main) px-5 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 md:block"
             >
               {t('nav.order')}
             </a>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(0_0%_10%)] text-white md:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-(--color-main) text-white md:hidden"
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -140,7 +140,7 @@ export function Navbar() {
                 <a
                   href="#menu"
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-full bg-[hsl(24_100%_50%)] px-5 py-2 text-sm font-semibold text-black"
+                  className="rounded-full bg-(--color-main) px-5 py-2 text-sm font-semibold text-black"
                 >
                   {t('nav.order')}
                 </a>
