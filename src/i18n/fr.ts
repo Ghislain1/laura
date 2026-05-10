@@ -45,7 +45,7 @@
   about: {
     badge: "Notre Histoire",
     title: "L'Art du\nBraise",
-    story1: "OBraise est ne d'une passion pour la cuisine africaine authentique et du desir de partager cet art culinaire unique avec les habitants d'Arras.",
+    story1: "L-Cuisine est ne d'une passion pour la cuisine africaine authentique et du desir de partager cet art culinaire unique avec les habitants d'Arras.",
     story2: "Ici, rien n'est laisse au hasard. Chaque plat est prepare dans le respect de l'art du braise : le feu, le temps, la marinade, le charbon.",
     story3: "Le resultat ? Une cuisine genereuse, savoureuse et conviviale, pensee pour le plaisir.",
     stat1_value: "100%",
@@ -88,14 +88,14 @@
   },
   testimonials: {
     badge: "Avis Clients",
-    title: "Ils Adorent\nOBraise",
+    title: "Ils Adorent\nL-Cuisine",
     rating_label: "Note globale",
     reviews_count: "Avis verifies",
   },
   faq: {
     badge: "FAQ",
     title: "Questions\nFrequentes",
-    subtitle: "Tout ce que vous devez savoir sur OBraise.",
+    subtitle: "Tout ce que vous devez savoir sur L-Cuisine.",
   },
   contact: {
     badge: "Contact",

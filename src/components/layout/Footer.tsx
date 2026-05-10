@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[hsl(0_0%_12%)] pt-8 sm:flex-row">
           <p className="text-xs text-[hsl(0_0%_40%)]">
-            &copy; {year} OBraise. {t('footer.rights')}
+            &copy; {year} L-Cuisine. {t('footer.rights')}
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-[hsl(0_0%_40%)] hover:text-white">

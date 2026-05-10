@@ -45,7 +45,7 @@
   about: {
     badge: 'Our Story',
     title: 'The Art of\nBraising',
-    story1: 'OBraise was born from a passion for authentic African cuisine and the desire to share this unique culinary art with the people of Arras.',
+    story1: 'L-Cuisine was born from a passion for authentic African cuisine and the desire to share this unique culinary art with the people of Arras.',
     story2: 'Here, nothing is left to chance. Every dish is prepared with respect for the art of braising: the fire, the time, the marinade, the charcoal.',
     story3: 'The result? Generous, flavorful and convivial cuisine, made for pure pleasure.',
     stat1_value: '100%',
@@ -88,14 +88,14 @@
   },
   testimonials: {
     badge: 'Customer Reviews',
-    title: 'They Love\nOBraise',
+    title: 'They Love\nL-Cuisine',
     rating_label: 'Overall rating',
     reviews_count: 'Verified reviews',
   },
   faq: {
     badge: 'FAQ',
     title: 'Frequently\nAsked Questions',
-    subtitle: 'Everything you need to know about OBraise.',
+    subtitle: 'Everything you need to know about L-Cuisine.',
   },
   contact: {
     badge: 'Contact',

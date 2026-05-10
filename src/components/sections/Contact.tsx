@@ -10,7 +10,7 @@ export function Contact() {
   const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
     const text = encodeURIComponent(
-      'Bonjour OBraise !\n\nNom: ' + form.name + '\nEmail: ' + form.email + '\n\nMessage:\n' + form.message
+      'Bonjour L-Cuisine !\n\nNom: ' + form.name + '\nEmail: ' + form.email + '\n\nMessage:\n' + form.message
     );
     window.open('https://wa.me/33621370373?text=' + text, '_blank');
   };
