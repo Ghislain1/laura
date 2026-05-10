@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+﻿import { useTranslation } from 'react-i18next';
 import { MessageCircle, Truck, Bell, Package } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
 import { deliveryZones } from '../../data';

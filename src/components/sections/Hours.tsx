@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Clock, CheckCircle } from 'lucide-react';
@@ -40,7 +40,7 @@ export function Hours() {
                     </span>
                     <span className="text-sm text-[hsl(0_0%_55%)]">{t('hours.everyday')}</span>
                   </div>
-                  <p className="mt-1 text-xl font-semibold text-white">12:00 � 21:00</p>
+                  <p className="mt-1 text-xl font-semibold text-white">12:00 — 21:00</p>
                 </div>
               </div>
 

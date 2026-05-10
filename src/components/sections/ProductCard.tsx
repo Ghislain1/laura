@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Plus, Check, Flame, X } from 'lucide-react';
@@ -187,7 +187,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 onClick={handleAddWithOptions}
                 className="w-full rounded-2xl bg-(--color-main) py-3.5 text-base font-semibold text-black"
               >
-                {t('menu.addToCart')} � {formatPrice(product.price)}
+                {t('menu.addToCart')} — {formatPrice(product.price)}
               </button>
             </motion.div>
           </motion.div>

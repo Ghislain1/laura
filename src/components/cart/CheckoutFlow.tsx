@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, CheckCircle, CreditCard, MessageCircle, Flame } from 'lucide-react';
@@ -217,7 +217,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
               className="flex w-full items-center justify-center gap-2 rounded-2xl bg-(--color-main) py-4 text-base font-semibold text-black"
               style={{ boxShadow: '0 0 25px color-mix(in srgb, var(--color-main) 30%, transparent)' }}
             >
-              {t('checkout.pay')} — {formatPrice(grandTotal)}
+              {t('checkout.pay')} â€” {formatPrice(grandTotal)}
             </button>
           ) : (
             <button

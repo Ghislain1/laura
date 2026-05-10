@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+﻿import { useTranslation } from 'react-i18next';
 import { Flame, Phone, MapPin, Clock, Share2, MessageCircle } from 'lucide-react';
 
 export function Footer() {

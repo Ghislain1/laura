@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, Play } from 'lucide-react';
 import { EmberParticles } from '../effects/EmberParticles';

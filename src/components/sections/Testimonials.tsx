@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+﻿import { useTranslation } from 'react-i18next';
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';

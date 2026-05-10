@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+﻿import { useTranslation } from 'react-i18next';
 import { Flame } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
 
@@ -16,7 +16,7 @@ export function About() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_80%_50%,hsl(354_79%_46%/0.07),transparent)]" />
 
       <div className="relative mx-auto grid max-w-[1400px] items-center gap-16 px-6 lg:grid-cols-2">
-        {/* Left � Image stack */}
+        {/* Left ï¿½ Image stack */}
         <FadeIn direction="right">
           <div className="relative h-[500px]">
             <div
@@ -39,7 +39,7 @@ export function About() {
           </div>
         </FadeIn>
 
-        {/* Right � Text */}
+        {/* Right ï¿½ Text */}
         <div>
           <FadeIn delay={0.1}>
             <SectionBadge>{t('about.badge')}</SectionBadge>

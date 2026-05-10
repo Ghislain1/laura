@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+﻿import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ShoppingCart, Menu, X, Flame, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
