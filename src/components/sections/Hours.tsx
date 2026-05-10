@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Clock, CheckCircle } from 'lucide-react';
@@ -18,7 +18,7 @@ export function Hours() {
           <h2 className="font-display mt-4 text-[clamp(2.8rem,6vw,5rem)] uppercase leading-none text-white">
             {t('hours.title').split('\n').map((line, i) => (
               <span key={i} className="block">
-                {i === 1 ? <span className="text-[hsl(24_100%_50%)]">{line}</span> : line}
+                {i === 1 ? <span className="text-(--color-main)">{line}</span> : line}
               </span>
             ))}
           </h2>
@@ -30,8 +30,8 @@ export function Hours() {
           <FadeIn direction="right">
             <div className="rounded-3xl border border-[hsl(0_0%_15%)] bg-[hsl(0_0%_8%)] p-8">
               <div className="flex items-center gap-4 mb-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[hsl(24_100%_50%/0.15)]">
-                  <Clock className="h-7 w-7 text-[hsl(24_100%_50%)]" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-(--color-main)/15">
+                  <Clock className="h-7 w-7 text-(--color-main)" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ export function Hours() {
                     </span>
                     <span className="text-sm text-[hsl(0_0%_55%)]">{t('hours.everyday')}</span>
                   </div>
-                  <p className="mt-1 text-xl font-semibold text-white">12:00 — 21:00</p>
+                  <p className="mt-1 text-xl font-semibold text-white">12:00 � 21:00</p>
                 </div>
               </div>
 
@@ -59,11 +59,11 @@ export function Hours() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-6 flex items-center gap-3 rounded-2xl border border-[hsl(24_100%_50%/0.3)] bg-[hsl(24_100%_50%/0.1)] p-4"
+                  className="mt-6 flex items-center gap-3 rounded-2xl border border-(--color-main)/30 bg-(--color-main)/10 p-4"
                 >
-                  <CheckCircle className="h-5 w-5 text-[hsl(24_100%_50%)]" />
+                  <CheckCircle className="h-5 w-5 text-(--color-main)" />
                   <span className="text-sm font-medium text-white">
-                    {t('hours.selected')}: <span className="text-[hsl(24_100%_50%)]">{selected}</span>
+                    {t('hours.selected')}: <span className="text-(--color-main)">{selected}</span>
                   </span>
                 </motion.div>
               )}
@@ -71,7 +71,7 @@ export function Hours() {
               {selected && (
                 <a
                   href="#menu"
-                  className="mt-4 block w-full rounded-2xl bg-[hsl(24_100%_50%)] py-3.5 text-center text-base font-semibold text-black"
+                  className="mt-4 block w-full rounded-2xl bg-(--color-main) py-3.5 text-center text-base font-semibold text-black"
                 >
                   {t('hours.order_now')}
                 </a>
@@ -93,9 +93,9 @@ export function Hours() {
                       'rounded-xl border py-3.5 text-center text-sm font-medium transition-all',
                       !slot.available && 'opacity-35 cursor-not-allowed',
                       slot.available && selected === slot.label
-                        ? 'border-[hsl(24_100%_50%)] bg-[hsl(24_100%_50%/0.15)] text-[hsl(24_100%_50%)]'
+                        ? 'border-(--color-main) bg-(--color-main)/15 text-(--color-main)'
                         : slot.available
-                        ? 'border-[hsl(0_0%_18%)] bg-[hsl(0_0%_8%)] text-[hsl(0_0%_65%)] hover:border-[hsl(24_100%_50%/0.5)] hover:text-white'
+                        ? 'border-[hsl(0_0%_18%)] bg-[hsl(0_0%_8%)] text-[hsl(0_0%_65%)] hover:border-(--color-main)/50 hover:text-white'
                         : 'border-[hsl(0_0%_15%)] bg-[hsl(0_0%_6%)] text-[hsl(0_0%_30%)]'
                     )}
                   >

@@ -1,4 +1,4 @@
-﻿import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Flame, Phone, MapPin, Clock, Share2, MessageCircle } from 'lucide-react';
 
 export function Footer() {
@@ -18,11 +18,11 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[hsl(24_100%_50%)]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-(--color-main)">
                 <Flame className="h-5 w-5 text-black" />
               </div>
               <span className="font-display text-2xl text-white">
-                O<span className="text-[hsl(24_100%_50%)]">Braise</span>
+                O<span className="text-(--color-main)">Braise</span>
               </span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-[hsl(0_0%_55%)]">
@@ -34,7 +34,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-[hsl(0_0%_12%)] text-[hsl(0_0%_55%)] transition-colors hover:bg-[hsl(24_100%_50%)] hover:text-black"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-[hsl(0_0%_12%)] text-[hsl(0_0%_55%)] transition-colors hover:bg-(--color-main) hover:text-black"
               >
                 <Share2 className="h-4 w-4" />
               </a>
@@ -43,7 +43,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-[hsl(0_0%_12%)] text-[hsl(0_0%_55%)] transition-colors hover:bg-[hsl(24_100%_50%)] hover:text-black"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-[hsl(0_0%_12%)] text-[hsl(0_0%_55%)] transition-colors hover:bg-(--color-main) hover:text-black"
               >
                 <MessageCircle className="h-4 w-4" />
               </a>
@@ -59,7 +59,7 @@ export function Footer() {
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    className="text-sm text-[hsl(0_0%_55%)] transition-colors hover:text-[hsl(24_100%_50%)]"
+                    className="text-sm text-[hsl(0_0%_55%)] transition-colors hover:text-(--color-main)"
                   >
                     {t('nav.' + link.key)}
                   </a>
@@ -74,15 +74,15 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-[hsl(0_0%_55%)]">
-                <Phone className="h-4 w-4 shrink-0 text-[hsl(24_100%_50%)]" />
+                <Phone className="h-4 w-4 shrink-0 text-(--color-main)" />
                 {t('contact.phone')}
               </li>
               <li className="flex items-center gap-3 text-sm text-[hsl(0_0%_55%)]">
-                <MapPin className="h-4 w-4 shrink-0 text-[hsl(24_100%_50%)]" />
+                <MapPin className="h-4 w-4 shrink-0 text-(--color-main)" />
                 {t('contact.location')}
               </li>
               <li className="flex items-center gap-3 text-sm text-[hsl(0_0%_55%)]">
-                <Clock className="h-4 w-4 shrink-0 text-[hsl(24_100%_50%)]" />
+                <Clock className="h-4 w-4 shrink-0 text-(--color-main)" />
                 {t('contact.hours')}
               </li>
             </ul>

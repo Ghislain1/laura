@@ -1,4 +1,4 @@
-﻿import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
@@ -17,7 +17,7 @@ export function Testimonials() {
           <h2 className="font-display mt-4 text-[clamp(2.8rem,6vw,5rem)] uppercase leading-none text-white">
             {t('testimonials.title').split('\n').map((line, i) => (
               <span key={i} className="block">
-                {i === 1 ? <span className="text-[hsl(24_100%_50%)]">{line}</span> : line}
+                {i === 1 ? <span className="text-(--color-main)">{line}</span> : line}
               </span>
             ))}
           </h2>
@@ -26,14 +26,14 @@ export function Testimonials() {
         <FadeIn delay={0.1} className="mb-12 flex justify-center">
           <div className="flex items-center gap-6 rounded-2xl border border-[hsl(0_0%_15%)] bg-[hsl(0_0%_8%)] px-8 py-5">
             <div className="text-center">
-              <p className="font-display text-5xl text-[hsl(24_100%_50%)]">4.9</p>
+              <p className="font-display text-5xl text-(--color-main)">4.9</p>
               <p className="mt-1 text-xs text-[hsl(0_0%_50%)]">{t('testimonials.rating_label')}</p>
             </div>
             <div className="h-12 w-px bg-[hsl(0_0%_15%)]" />
             <div>
               <div className="flex gap-1">
                 {[1,2,3,4,5].map((s) => (
-                  <Star key={s} className="h-5 w-5 fill-[hsl(24_100%_50%)] text-[hsl(24_100%_50%)]" />
+                  <Star key={s} className="h-5 w-5 fill-(--color-main) text-(--color-main)" />
                 ))}
               </div>
               <p className="mt-1 text-xs text-[hsl(0_0%_50%)]">127 {t('testimonials.reviews_count')}</p>
@@ -51,19 +51,19 @@ export function Testimonials() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="relative rounded-2xl border border-[hsl(0_0%_15%)] bg-[hsl(0_0%_8%)] p-6"
             >
-              <Quote className="absolute right-5 top-5 h-8 w-8 text-[hsl(24_100%_50%/0.15)]" />
+              <Quote className="absolute right-5 top-5 h-8 w-8 text-(--color-main)/15" />
 
               <div className="mb-4 flex items-center gap-3">
                 <img
                   src={review.avatar}
                   alt={review.name}
-                  className="h-11 w-11 rounded-full object-cover ring-2 ring-[hsl(24_100%_50%/0.3)]"
+                  className="h-11 w-11 rounded-full object-cover ring-2 ring-(--color-main)/30"
                 />
                 <div>
                   <p className="font-semibold text-white">{review.name}</p>
                   <div className="flex gap-0.5 mt-0.5">
                     {Array.from({ length: review.rating }).map((_, s) => (
-                      <Star key={s} className="h-3.5 w-3.5 fill-[hsl(24_100%_50%)] text-[hsl(24_100%_50%)]" />
+                      <Star key={s} className="h-3.5 w-3.5 fill-(--color-main) text-(--color-main)" />
                     ))}
                   </div>
                 </div>

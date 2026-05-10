@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
@@ -18,7 +18,7 @@ export function FAQ() {
           <h2 className="font-display mt-4 text-[clamp(2.8rem,6vw,5rem)] uppercase leading-none text-white">
             {t('faq.title').split('\n').map((line, i) => (
               <span key={i} className="block">
-                {i === 1 ? <span className="text-[hsl(24_100%_50%)]">{line}</span> : line}
+                {i === 1 ? <span className="text-(--color-main)">{line}</span> : line}
               </span>
             ))}
           </h2>
@@ -41,7 +41,7 @@ export function FAQ() {
                 className={cn(
                   'rounded-2xl border transition-colors',
                   isOpen
-                    ? 'border-[hsl(24_100%_50%/0.3)] bg-[hsl(24_100%_50%/0.05)]'
+                    ? 'border-(--color-main)/30 bg-(--color-main)/5'
                     : 'border-[hsl(0_0%_15%)] bg-[hsl(0_0%_8%)]'
                 )}
               >
@@ -54,7 +54,7 @@ export function FAQ() {
                   </span>
                   <ChevronDown
                     className={cn(
-                      'h-5 w-5 shrink-0 text-[hsl(24_100%_50%)] transition-transform duration-300',
+                      'h-5 w-5 shrink-0 text-(--color-main) transition-transform duration-300',
                       isOpen && 'rotate-180'
                     )}
                   />

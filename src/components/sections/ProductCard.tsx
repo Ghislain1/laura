@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Plus, Check, Flame, X } from 'lucide-react';
@@ -57,7 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0_0%_10%)] via-transparent to-transparent" />
           {product.popular && (
-            <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-[hsl(24_100%_50%)] px-2.5 py-1 text-xs font-semibold text-black">
+            <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-(--color-main) px-2.5 py-1 text-xs font-semibold text-black">
               <Flame className="h-3 w-3" />
               {t('menu.popular')}
             </div>
@@ -71,7 +71,7 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
 
           <div className="mt-auto flex items-center justify-between">
-            <span className="font-display text-2xl text-[hsl(24_100%_50%)]">
+            <span className="font-display text-2xl text-(--color-main)">
               {formatPrice(product.price)}
             </span>
             <motion.button
@@ -80,7 +80,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 'flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold transition-colors',
                 added
                   ? 'bg-[hsl(142_71%_45%)] text-white'
-                  : 'bg-[hsl(24_100%_50%)] text-black hover:bg-[hsl(24_100%_45%)]'
+                  : 'bg-(--color-main) text-black hover:bg-[hsl(24_100%_45%)]'
               )}
               whileTap={{ scale: 0.93 }}
             >
@@ -134,7 +134,7 @@ export function ProductCard({ product }: ProductCardProps) {
               <div className="mb-5 flex items-start justify-between">
                 <div>
                   <h3 className="font-display text-2xl text-white">{name}</h3>
-                  <p className="text-[hsl(24_100%_50%)] font-semibold">{formatPrice(product.price)}</p>
+                  <p className="text-(--color-main) font-semibold">{formatPrice(product.price)}</p>
                 </div>
                 <button onClick={() => setShowOptions(false)} className="rounded-full bg-[hsl(0_0%_15%)] p-2 text-[hsl(0_0%_55%)] hover:text-white">
                   <X className="h-5 w-5" />
@@ -151,7 +151,7 @@ export function ProductCard({ product }: ProductCardProps) {
                       className={cn(
                         'flex-1 rounded-xl border py-2.5 text-sm font-medium transition-colors',
                         selectedSpice === level
-                          ? 'border-[hsl(24_100%_50%)] bg-[hsl(24_100%_50%/0.15)] text-[hsl(24_100%_50%)]'
+                          ? 'border-(--color-main) bg-(--color-main)/15 text-(--color-main)'
                           : 'border-[hsl(0_0%_20%)] text-[hsl(0_0%_55%)]'
                       )}
                     >
@@ -172,7 +172,7 @@ export function ProductCard({ product }: ProductCardProps) {
                         className={cn(
                           'rounded-xl border px-4 py-2.5 text-left text-sm font-medium transition-colors',
                           selectedOption?.id === opt.id
-                            ? 'border-[hsl(24_100%_50%)] bg-[hsl(24_100%_50%/0.15)] text-[hsl(24_100%_50%)]'
+                            ? 'border-(--color-main) bg-(--color-main)/15 text-(--color-main)'
                             : 'border-[hsl(0_0%_20%)] text-[hsl(0_0%_55%)]'
                         )}
                       >
@@ -185,9 +185,9 @@ export function ProductCard({ product }: ProductCardProps) {
 
               <button
                 onClick={handleAddWithOptions}
-                className="w-full rounded-2xl bg-[hsl(24_100%_50%)] py-3.5 text-base font-semibold text-black"
+                className="w-full rounded-2xl bg-(--color-main) py-3.5 text-base font-semibold text-black"
               >
-                {t('menu.addToCart')} — {formatPrice(product.price)}
+                {t('menu.addToCart')} � {formatPrice(product.price)}
               </button>
             </motion.div>
           </motion.div>

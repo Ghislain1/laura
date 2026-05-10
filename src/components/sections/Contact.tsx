@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { MessageCircle, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
@@ -31,7 +31,7 @@ export function Contact() {
           <h2 className="font-display mt-4 text-[clamp(2.8rem,6vw,5rem)] uppercase leading-none text-white">
             {t('contact.title').split('\n').map((line, i) => (
               <span key={i} className="block">
-                {i === 1 ? <span className="text-[hsl(24_100%_50%)]">{line}</span> : line}
+                {i === 1 ? <span className="text-(--color-main)">{line}</span> : line}
               </span>
             ))}
           </h2>
@@ -51,7 +51,7 @@ export function Contact() {
                   placeholder={t('contact.name_placeholder')}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full rounded-xl border border-[hsl(0_0%_20%)] bg-[hsl(0_0%_8%)] px-4 py-3 text-sm text-white placeholder-[hsl(0_0%_40%)] outline-none transition-colors focus:border-[hsl(24_100%_50%)]"
+                  className="w-full rounded-xl border border-[hsl(0_0%_20%)] bg-[hsl(0_0%_8%)] px-4 py-3 text-sm text-white placeholder-[hsl(0_0%_40%)] outline-none transition-colors focus:border-(--color-main)"
                 />
               </div>
               <div>
@@ -64,7 +64,7 @@ export function Contact() {
                   placeholder={t('contact.email_placeholder')}
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full rounded-xl border border-[hsl(0_0%_20%)] bg-[hsl(0_0%_8%)] px-4 py-3 text-sm text-white placeholder-[hsl(0_0%_40%)] outline-none transition-colors focus:border-[hsl(24_100%_50%)]"
+                  className="w-full rounded-xl border border-[hsl(0_0%_20%)] bg-[hsl(0_0%_8%)] px-4 py-3 text-sm text-white placeholder-[hsl(0_0%_40%)] outline-none transition-colors focus:border-(--color-main)"
                 />
               </div>
               <div>
@@ -77,7 +77,7 @@ export function Contact() {
                   placeholder={t('contact.message_placeholder')}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full resize-none rounded-xl border border-[hsl(0_0%_20%)] bg-[hsl(0_0%_8%)] px-4 py-3 text-sm text-white placeholder-[hsl(0_0%_40%)] outline-none transition-colors focus:border-[hsl(24_100%_50%)]"
+                  className="w-full resize-none rounded-xl border border-[hsl(0_0%_20%)] bg-[hsl(0_0%_8%)] px-4 py-3 text-sm text-white placeholder-[hsl(0_0%_40%)] outline-none transition-colors focus:border-(--color-main)"
                 />
               </div>
 
@@ -94,7 +94,7 @@ export function Contact() {
                   onClick={() => {
                     window.location.href = 'mailto:contact@obraise.fr?subject=Message depuis le site&body=' + encodeURIComponent(form.message);
                   }}
-                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[hsl(0_0%_20%)] py-3.5 text-sm font-semibold text-[hsl(0_0%_65%)] transition-colors hover:border-[hsl(24_100%_50%)] hover:text-white"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[hsl(0_0%_20%)] py-3.5 text-sm font-semibold text-[hsl(0_0%_65%)] transition-colors hover:border-(--color-main) hover:text-white"
                 >
                   <Send className="h-4 w-4" />
                   {t('contact.send_email')}
@@ -109,8 +109,8 @@ export function Contact() {
               <div className="space-y-5">
                 {infos.map((info) => (
                   <div key={info.valueKey} className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[hsl(24_100%_50%/0.15)]">
-                      <info.icon className="h-5 w-5 text-[hsl(24_100%_50%)]" />
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-(--color-main)/15">
+                      <info.icon className="h-5 w-5 text-(--color-main)" />
                     </div>
                     <span className="text-sm text-[hsl(0_0%_65%)]">{t(info.valueKey)}</span>
                   </div>

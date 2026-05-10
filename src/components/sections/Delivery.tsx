@@ -1,4 +1,4 @@
-﻿import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { MessageCircle, Truck, Bell, Package } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
 import { deliveryZones } from '../../data';
@@ -23,7 +23,7 @@ export function Delivery() {
           <h2 className="font-display mt-4 text-[clamp(2.8rem,6vw,5rem)] uppercase leading-none text-white">
             {t('delivery.title').split('\n').map((line, i) => (
               <span key={i} className="block">
-                {i === 1 ? <span className="text-[hsl(24_100%_50%)]">{line}</span> : line}
+                {i === 1 ? <span className="text-(--color-main)">{line}</span> : line}
               </span>
             ))}
           </h2>
@@ -50,7 +50,7 @@ export function Delivery() {
                   {deliveryZones.map((zone, i) => (
                     <tr key={zone.name} className={i % 2 === 0 ? '' : 'bg-[hsl(0_0%_6%)]'}>
                       <td className="px-5 py-3.5 text-sm font-medium text-white">{zone.name}</td>
-                      <td className="px-5 py-3.5 text-sm text-[hsl(24_100%_50%)] font-semibold">
+                      <td className="px-5 py-3.5 text-sm text-(--color-main) font-semibold">
                         {zone.price === 0 ? t('delivery.free') : formatPrice(zone.price)}
                       </td>
                       <td className="px-5 py-3.5 text-sm text-[hsl(0_0%_60%)]">{formatPrice(zone.minOrder)}</td>
@@ -76,8 +76,8 @@ export function Delivery() {
             {infos.map((info, i) => (
               <FadeIn key={info.titleKey} delay={i * 0.1}>
                 <div className="flex gap-5 rounded-2xl border border-[hsl(0_0%_15%)] bg-[hsl(0_0%_8%)] p-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[hsl(24_100%_50%/0.15)]">
-                    <info.icon className="h-5 w-5 text-[hsl(24_100%_50%)]" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-(--color-main)/15">
+                    <info.icon className="h-5 w-5 text-(--color-main)" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">{t(info.titleKey)}</h4>

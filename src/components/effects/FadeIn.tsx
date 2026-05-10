@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 interface FadeInProps {
@@ -36,8 +36,8 @@ interface SectionBadgeProps {
 
 export function SectionBadge({ children }: SectionBadgeProps) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-[hsl(24_100%_50%/0.3)] bg-[hsl(24_100%_50%/0.1)] px-4 py-1.5 text-sm font-medium text-[hsl(24_100%_50%)]">
-      <span className="h-1.5 w-1.5 rounded-full bg-[hsl(24_100%_50%)]" />
+    <span className="inline-flex items-center gap-2 rounded-full border border-(--color-main)/30 bg-(--color-main)/10 px-4 py-1.5 text-sm font-medium text-(--color-main)">
+      <span className="h-1.5 w-1.5 rounded-full bg-(--color-main)" />
       {children}
     </span>
   );

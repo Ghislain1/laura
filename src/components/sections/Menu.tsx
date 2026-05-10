@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { products } from '../../data';
@@ -53,7 +53,7 @@ export function Menu() {
               {category === cat.id && (
                 <motion.span
                   layoutId="cat-pill"
-                  className="absolute inset-0 rounded-full bg-[hsl(24_100%_50%)]"
+                  className="absolute inset-0 rounded-full bg-(--color-main)"
                   transition={{ type: 'spring', stiffness: 380, damping: 28 }}
                 />
               )}

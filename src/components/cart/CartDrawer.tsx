@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { X, Minus, Plus, ShoppingBag, ArrowRight, Flame } from 'lucide-react';
@@ -40,10 +40,10 @@ export function CartDrawer() {
               <>
                 <div className="flex items-center justify-between border-b border-[hsl(0_0%_14%)] px-6 py-5">
                   <div className="flex items-center gap-3">
-                    <ShoppingBag className="h-5 w-5 text-[hsl(24_100%_50%)]" />
+                    <ShoppingBag className="h-5 w-5 text-(--color-main)" />
                     <h2 className="text-lg font-semibold text-white">{t('cart.title')}</h2>
                     {itemCount > 0 && (
-                      <span className="rounded-full bg-[hsl(24_100%_50%)] px-2 py-0.5 text-xs font-bold text-black">
+                      <span className="rounded-full bg-(--color-main) px-2 py-0.5 text-xs font-bold text-black">
                         {itemCount}
                       </span>
                     )}
@@ -100,7 +100,7 @@ export function CartDrawer() {
                                   <X className="h-4 w-4" />
                                 </button>
                               </div>
-                              <p className="text-sm font-semibold text-[hsl(24_100%_50%)]">
+                              <p className="text-sm font-semibold text-(--color-main)">
                                 {formatPrice(item.product.price * item.quantity)}
                               </p>
                               <div className="flex items-center gap-2">
@@ -128,7 +128,7 @@ export function CartDrawer() {
                       {upsellProducts.length > 0 && (
                         <div className="mt-4 pt-4 border-t border-[hsl(0_0%_12%)]">
                           <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[hsl(0_0%_45%)]">
-                            <Flame className="h-3.5 w-3.5 text-[hsl(24_100%_50%)]" />
+                            <Flame className="h-3.5 w-3.5 text-(--color-main)" />
                             {t('cart.upsell')}
                           </p>
                           <div className="flex flex-col gap-2">
@@ -136,14 +136,14 @@ export function CartDrawer() {
                               <button
                                 key={p.id}
                                 onClick={() => addItem(p)}
-                                className="flex items-center gap-3 rounded-xl border border-[hsl(0_0%_14%)] bg-[hsl(0_0%_9%)] p-3 text-left transition-colors hover:border-[hsl(24_100%_50%/0.4)]"
+                                className="flex items-center gap-3 rounded-xl border border-[hsl(0_0%_14%)] bg-[hsl(0_0%_9%)] p-3 text-left transition-colors hover:border-(--color-main)/40"
                               >
                                 <img src={p.image} alt={p.name} className="h-12 w-12 rounded-lg object-cover" />
                                 <div className="flex-1 min-w-0">
                                   <p className="text-sm font-medium text-white truncate">{p.name}</p>
-                                  <p className="text-xs text-[hsl(24_100%_50%)]">{formatPrice(p.price)}</p>
+                                  <p className="text-xs text-(--color-main)">{formatPrice(p.price)}</p>
                                 </div>
-                                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[hsl(24_100%_50%/0.15)] text-[hsl(24_100%_50%)]">
+                                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-(--color-main)/15 text-(--color-main)">
                                   <Plus className="h-4 w-4" />
                                 </div>
                               </button>
@@ -169,11 +169,12 @@ export function CartDrawer() {
                     </div>
                     <div className="flex justify-between border-t border-[hsl(0_0%_14%)] pt-3 text-base font-bold">
                       <span className="text-white">{t('cart.total')}</span>
-                      <span className="text-[hsl(24_100%_50%)]">{formatPrice(total + deliveryFee)}</span>
+                      <span className="text-(--color-main)">{formatPrice(total + deliveryFee)}</span>
                     </div>
                     <button
                       onClick={() => setCheckingOut(true)}
-                      className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[hsl(24_100%_50%)] py-4 text-base font-semibold text-black shadow-[0_0_25px_hsl(24_100%_50%/0.3)] transition-all hover:shadow-[0_0_35px_hsl(24_100%_50%/0.45)]"
+                      className="flex w-full items-center justify-center gap-2 rounded-2xl bg-(--color-main) py-4 text-base font-semibold text-black transition-all hover:brightness-110"
+                      style={{ boxShadow: '0 0 25px color-mix(in srgb, var(--color-main) 30%, transparent)' }}
                     >
                       {t('cart.checkout')}
                       <ArrowRight className="h-5 w-5" />

@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, Play } from 'lucide-react';
 import { EmberParticles } from '../effects/EmberParticles';
@@ -31,7 +31,7 @@ export function Hero() {
       <EmberParticles count={120} />
 
       {/* Glow orb */}
-      <div className="pointer-events-none absolute bottom-[-10%] left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[hsl(24_100%_50%/0.08)] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-[-10%] left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-(--color-main)/8 blur-[120px]" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 text-center">
@@ -40,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-[hsl(24_100%_50%/0.4)] bg-[hsl(24_100%_50%/0.1)] px-5 py-2 text-sm font-medium text-(--color-main) backdrop-blur-sm"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-(--color-main)/40 bg-(--color-main)/10 px-5 py-2 text-sm font-medium text-(--color-main) backdrop-blur-sm"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--color-main) opacity-75" />
@@ -86,7 +86,10 @@ export function Hero() {
         >
           <a
             href="#menu"
-            className="group flex items-center gap-2 rounded-full bg-(--color-main) px-8 py-3.5 text-base font-semibold text-black shadow-[0_0_30px_hsl(24_100%_50%/0.35)] transition-all hover:shadow-[0_0_40px_hsl(24_100%_50%/0.55)] hover:scale-105"
+            className="group flex items-center gap-2 rounded-full bg-(--color-main) px-8 py-3.5 text-base font-semibold text-black transition-all hover:scale-105"
+            style={{ boxShadow: '0 0 30px color-mix(in srgb, var(--color-main) 35%, transparent)' }}
+            onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '0 0 40px color-mix(in srgb, var(--color-main) 55%, transparent)')}
+            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '0 0 30px color-mix(in srgb, var(--color-main) 35%, transparent)')}
           >
             {t('hero.cta_order')}
           </a>
@@ -108,7 +111,7 @@ export function Hero() {
         >
           {[
             { val: '500+', label: 'Clients satisfaits' },
-            { val: '5★', label: 'Note moyenne' },
+            { val: '5?', label: 'Note moyenne' },
             { val: '30min', label: 'Livraison' },
           ].map((stat) => (
             <div key={stat.val} className="text-center">

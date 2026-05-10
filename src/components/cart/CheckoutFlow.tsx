@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, CheckCircle, CreditCard, MessageCircle, Flame } from 'lucide-react';
@@ -73,8 +73,8 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
       <div className="flex gap-1 px-6 py-4">
         {steps.map((s, i) => (
           <div key={s} className="flex flex-1 flex-col items-center gap-1.5">
-            <div className={cn('h-1 w-full rounded-full transition-colors', i <= stepIdx ? 'bg-[hsl(24_100%_50%)]' : 'bg-[hsl(0_0%_15%)]')} />
-            <span className={cn('text-[10px] font-medium', i === stepIdx ? 'text-[hsl(24_100%_50%)]' : 'text-[hsl(0_0%_40%)]')}>
+            <div className={cn('h-1 w-full rounded-full transition-colors', i <= stepIdx ? 'bg-(--color-main)' : 'bg-[hsl(0_0%_15%)]')} />
+            <span className={cn('text-[10px] font-medium', i === stepIdx ? 'text-(--color-main)' : 'text-[hsl(0_0%_40%)]')}>
               {t('checkout.step_' + s)}
             </span>
           </div>
@@ -102,7 +102,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                       <p className="text-sm font-medium text-white">{item.product.name}</p>
                       <p className="text-xs text-[hsl(0_0%_50%)]">x{item.quantity}</p>
                     </div>
-                    <p className="text-sm font-semibold text-[hsl(24_100%_50%)]">{formatPrice(item.product.price * item.quantity)}</p>
+                    <p className="text-sm font-semibold text-(--color-main)">{formatPrice(item.product.price * item.quantity)}</p>
                   </div>
                 ))}
                 <div className="rounded-xl border border-[hsl(0_0%_14%)] p-4 space-y-2">
@@ -117,7 +117,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                   </div>
                   <div className="flex justify-between border-t border-[hsl(0_0%_14%)] pt-2 font-bold">
                     <span className="text-white">{t('cart.total')}</span>
-                    <span className="text-[hsl(24_100%_50%)]">{formatPrice(grandTotal)}</span>
+                    <span className="text-(--color-main)">{formatPrice(grandTotal)}</span>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                       type={type}
                       value={info[key]}
                       onChange={(e) => setInfo({ ...info, [key]: e.target.value })}
-                      className="w-full rounded-xl border border-[hsl(0_0%_18%)] bg-[hsl(0_0%_9%)] px-4 py-3 text-sm text-white outline-none focus:border-[hsl(24_100%_50%)]"
+                      className="w-full rounded-xl border border-[hsl(0_0%_18%)] bg-[hsl(0_0%_9%)] px-4 py-3 text-sm text-white outline-none focus:border-(--color-main)"
                     />
                   </div>
                 ))}
@@ -144,7 +144,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                     placeholder={t('checkout.instructions_placeholder')}
                     value={info.instructions}
                     onChange={(e) => setInfo({ ...info, instructions: e.target.value })}
-                    className="w-full resize-none rounded-xl border border-[hsl(0_0%_18%)] bg-[hsl(0_0%_9%)] px-4 py-3 text-sm text-white outline-none focus:border-[hsl(24_100%_50%)]"
+                    className="w-full resize-none rounded-xl border border-[hsl(0_0%_18%)] bg-[hsl(0_0%_9%)] px-4 py-3 text-sm text-white outline-none focus:border-(--color-main)"
                   />
                 </div>
               </div>
@@ -153,9 +153,9 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
             {step === 'payment' && (
               <div className="space-y-5">
                 <h3 className="font-semibold text-white">{t('checkout.payment_title')}</h3>
-                <div className="rounded-xl border border-[hsl(24_100%_50%/0.3)] bg-[hsl(24_100%_50%/0.08)] p-5">
+                <div className="rounded-xl border border-(--color-main)/30 bg-(--color-main)/8 p-5">
                   <div className="flex items-center gap-3 mb-4">
-                    <CreditCard className="h-5 w-5 text-[hsl(24_100%_50%)]" />
+                    <CreditCard className="h-5 w-5 text-(--color-main)" />
                     <p className="font-medium text-white">{t('checkout.card')}</p>
                   </div>
                   <div className="space-y-3">
@@ -166,14 +166,14 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                     </div>
                   </div>
                   <p className="mt-3 flex items-center gap-1.5 text-xs text-[hsl(0_0%_45%)]">
-                    <Flame className="h-3.5 w-3.5 text-[hsl(24_100%_50%)]" />
+                    <Flame className="h-3.5 w-3.5 text-(--color-main)" />
                     {t('checkout.secure')}
                   </p>
                 </div>
                 <div className="rounded-xl bg-[hsl(0_0%_9%)] p-4 text-sm text-[hsl(0_0%_55%)] space-y-1.5">
                   <div className="flex justify-between"><span>{t('cart.subtotal')}</span><span className="text-white">{formatPrice(total)}</span></div>
                   <div className="flex justify-between"><span>{t('cart.delivery')}</span><span className={deliveryFee === 0 ? 'text-[hsl(142_71%_45%)]' : 'text-white'}>{deliveryFee === 0 ? t('cart.free') : formatPrice(deliveryFee)}</span></div>
-                  <div className="flex justify-between border-t border-[hsl(0_0%_14%)] pt-1.5 font-bold text-base"><span className="text-white">{t('cart.total')}</span><span className="text-[hsl(24_100%_50%)]">{formatPrice(grandTotal)}</span></div>
+                  <div className="flex justify-between border-t border-[hsl(0_0%_14%)] pt-1.5 font-bold text-base"><span className="text-white">{t('cart.total')}</span><span className="text-(--color-main)">{formatPrice(grandTotal)}</span></div>
                 </div>
               </div>
             )}
@@ -189,7 +189,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                 </div>
                 <div className="rounded-xl border border-[hsl(0_0%_15%)] bg-[hsl(0_0%_9%)] px-6 py-4">
                   <p className="text-xs text-[hsl(0_0%_45%)]">{t('checkout.order_number')}</p>
-                  <p className="mt-1 font-display text-2xl text-[hsl(24_100%_50%)]">#{orderNum}</p>
+                  <p className="mt-1 font-display text-2xl text-(--color-main)">#{orderNum}</p>
                 </div>
                 <a
                   href={'https://wa.me/33621370373?text=' + encodeURIComponent('Bonjour L-Cuisine ! Commande #' + orderNum)}
@@ -214,14 +214,15 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
           {step === 'payment' ? (
             <button
               onClick={handleConfirm}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[hsl(24_100%_50%)] py-4 text-base font-semibold text-black shadow-[0_0_25px_hsl(24_100%_50%/0.3)]"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-(--color-main) py-4 text-base font-semibold text-black"
+              style={{ boxShadow: '0 0 25px color-mix(in srgb, var(--color-main) 30%, transparent)' }}
             >
               {t('checkout.pay')} — {formatPrice(grandTotal)}
             </button>
           ) : (
             <button
               onClick={() => goTo(steps[stepIdx + 1] as CheckoutStep)}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[hsl(24_100%_50%)] py-4 text-base font-semibold text-black"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-(--color-main) py-4 text-base font-semibold text-black"
             >
               {t('checkout.next')}
             </button>

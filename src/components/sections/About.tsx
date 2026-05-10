@@ -1,4 +1,4 @@
-﻿import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Flame } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
 
@@ -16,7 +16,7 @@ export function About() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_80%_50%,hsl(354_79%_46%/0.07),transparent)]" />
 
       <div className="relative mx-auto grid max-w-[1400px] items-center gap-16 px-6 lg:grid-cols-2">
-        {/* Left — Image stack */}
+        {/* Left � Image stack */}
         <FadeIn direction="right">
           <div className="relative h-[500px]">
             <div
@@ -29,17 +29,17 @@ export function About() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-[hsl(0_0%_4%/0.5)] to-transparent" />
 
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -right-6 rounded-2xl bg-[hsl(24_100%_50%)] px-6 py-5 shadow-2xl">
+            <div className="absolute -bottom-6 -right-6 rounded-2xl bg-(--color-main) px-6 py-5 shadow-2xl">
               <p className="font-display text-4xl text-black">100%</p>
               <p className="text-sm font-semibold text-black/80">Fait Maison</p>
             </div>
 
             {/* Ember glow */}
-            <div className="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-[hsl(24_100%_50%/0.15)] blur-3xl" />
+            <div className="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-(--color-main)/15 blur-3xl" />
           </div>
         </FadeIn>
 
-        {/* Right — Text */}
+        {/* Right � Text */}
         <div>
           <FadeIn delay={0.1}>
             <SectionBadge>{t('about.badge')}</SectionBadge>
@@ -48,7 +48,7 @@ export function About() {
             <h2 className="font-display mt-4 text-[clamp(2.8rem,5vw,4.5rem)] uppercase leading-none text-white">
               {t('about.title').split('\n').map((line, i) => (
                 <span key={i} className="block">
-                  {i === 1 ? <span className="text-[hsl(24_100%_50%)]">{line}</span> : line}
+                  {i === 1 ? <span className="text-(--color-main)">{line}</span> : line}
                 </span>
               ))}
             </h2>
@@ -58,7 +58,7 @@ export function About() {
             <div className="mt-6 space-y-4 text-[hsl(0_0%_60%)] leading-relaxed">
               <p>{t('about.story1')}</p>
               <p className="flex items-start gap-2">
-                <Flame className="mt-1 h-4 w-4 shrink-0 text-[hsl(24_100%_50%)]" />
+                <Flame className="mt-1 h-4 w-4 shrink-0 text-(--color-main)" />
                 {t('about.story2')}
               </p>
               <p className="text-[hsl(0_0%_75%)] font-medium">{t('about.story3')}</p>
@@ -70,7 +70,7 @@ export function About() {
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-[hsl(0_0%_15%)] pt-10">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-display text-3xl text-[hsl(24_100%_50%)]">{stat.value}</p>
+                  <p className="font-display text-3xl text-(--color-main)">{stat.value}</p>
                   <p className="mt-1 text-sm text-[hsl(0_0%_55%)]">{stat.label}</p>
                 </div>
               ))}

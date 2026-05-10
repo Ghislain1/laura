@@ -1,4 +1,4 @@
-﻿import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ShoppingCart, Menu, X, Flame, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -66,7 +66,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <button
               onClick={toggleLang}
-              className="hidden items-center gap-1.5 rounded-full border border-[hsl(0_0%_20%)] px-3 py-1.5 text-xs font-medium text-[hsl(0_0%_65%)] transition-colors hover:border-[hsl(24_100%_50%)] hover:text-white md:flex"
+              className="hidden items-center gap-1.5 rounded-full border border-[hsl(0_0%_20%)] px-3 py-1.5 text-xs font-medium text-[hsl(0_0%_65%)] transition-colors hover:border-(--color-main) hover:text-white md:flex"
             >
               <Globe className="h-3.5 w-3.5" />
               {i18n.language.toUpperCase()}
@@ -74,7 +74,7 @@ export function Navbar() {
 
             <button
               onClick={openCart}
-              className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(0_0%_10%)] text-white transition-colors hover:bg-[hsl(24_100%_50%)] hover:text-black"
+              className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(0_0%_10%)] text-white transition-colors hover:bg-(--color-main) hover:text-black"
             >
               <ShoppingCart className="h-5 w-5" />
               <AnimatePresence>
@@ -84,7 +84,7 @@ export function Navbar() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0 }}
-                    className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[hsl(24_100%_50%)] text-[10px] font-bold text-black"
+                    className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-(--color-main) text-[10px] font-bold text-black"
                   >
                     {itemCount}
                   </motion.span>

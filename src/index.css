@@ -2,18 +2,18 @@
 
 @theme {
   /* Brand Colors */
-  --color-ember-red: hsl(0 79% 46%);
-  --color-fire-orange: hsl(0 100% 50%);
+  --color-ember-red: hsl(24 100% 50%);
+  --color-fire-orange: hsl(24 100% 50%);
   --color-charcoal: hsl(0 0% 4%);
   --color-charcoal-light: hsl(0 0% 16%);
   --color-smoke: hsl(0 0% 17%);
   --color-cream: hsl(0 0% 97%);
-  --color-main: hsl(360, 80%, 50%);
+  --color-main: hsl(360 80% 50%);
 
   /* Semantic Tokens */
   --color-background: hsl(0 0% 4%);
   --color-foreground: hsl(0 0% 97%);
-  --color-primary: hsl(24 100% 50%);
+  --color-primary: var(--color-main);
   --color-primary-foreground: hsl(0 0% 4%);
   --color-accent: hsl(354 79% 46%);
   --color-accent-foreground: hsl(0 0% 97%);
@@ -27,7 +27,7 @@
   --color-popover-foreground: hsl(0 0% 97%);
   --color-border: hsl(0 0% 20%);
   --color-input: hsl(0 0% 20%);
-  --color-ring: hsl(24 100% 50%);
+  --color-ring: var(--color-main);
   --color-destructive: hsl(0 84% 60%);
 
   /* Typography */

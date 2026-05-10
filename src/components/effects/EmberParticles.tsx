@@ -12,7 +12,7 @@ interface Ember {
 }
 
 const COLORS = [
-  'hsl(24 100% 50%)',
+  'var(--color-main)',
   'hsl(354 79% 46%)',
   'hsl(38 100% 55%)',
   'hsl(14 100% 55%)',
