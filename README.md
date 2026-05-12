@@ -71,12 +71,17 @@ src/
 - Deploy a React SPA automatically
 - Todos:
   - Create a Netlify Site
-    - Site ID
+    - Site ID == Client ID
     - Auth Token
-  - Add GitHub Secrets
+  - Add GitHub Secrets (Not Variable)
     - Settings -> Secrets and variables -> Actions
-    - NETLIFY_AUTH_TOKEN
-    - NETLIFY_SITE_ID
+    - NETLIFY_AUTH_TOKEN --> secrets
+    - NETLIFY_SITE_ID  --> secrets
   - Create GitHub Actions YAML
     - Call it deploy.yml
-    -  netlify-cli is used as npm
+    - netlify-cli is used as npm
+- Netlify 
+  - tulnhbu059@pluniversity.edu.pl 
+  - V2026#
+  - LauraCuisine
+  - ID= nfp_kWAwBXdasKNKGhW6LPQ7bzzhjBFc9nJz9382
