@@ -85,3 +85,6 @@ src/
   - V2026#
   - LauraCuisine
   - ID= nfp_kWAwBXdasKNKGhW6LPQ7bzzhjBFc9nJz9382
+- CLI Netlify
+  - npm install -D netlify-cli
+  - 
