@@ -92,7 +92,7 @@ export function Contact() {
                 <button
                   type="button"
                   onClick={() => {
-                    window.location.href = 'mailto:contact@obraise.fr?subject=Message depuis le site&body=' + encodeURIComponent(form.message);
+                    window.location.href = 'mailto:contact@laurac.fr?subject=Message depuis le site&body=' + encodeURIComponent(form.message);
                   }}
                   className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[hsl(0_0%_20%)] py-3.5 text-sm font-semibold text-[hsl(0_0%_65%)] transition-colors hover:border-(--color-main) hover:text-white"
                 >
@@ -119,11 +119,11 @@ export function Contact() {
 
               <div
                 className="mt-10 h-56 overflow-hidden rounded-2xl border border-[hsl(0_0%_15%)] bg-[hsl(0_0%_8%)] bg-cover bg-center"
-                style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=70)' }}
+                style={{ backgroundImage: 'url(https://media.istockphoto.com/id/1594168691/photo/cityscape-of-mainz-with-mainz-cathedral.jpg)' }}
               >
                 <div className="flex h-full items-center justify-center bg-black/40">
                   <div className="rounded-xl bg-[hsl(0_0%_8%/0.9)] px-4 py-2 text-sm text-white backdrop-blur-sm">
-                    Arras, Hauts-de-France
+                    Mainz, Deutschland
                   </div>
                 </div>
               </div>

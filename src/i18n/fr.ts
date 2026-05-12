@@ -111,8 +111,8 @@
     send_email: "Envoyer par Email",
     or: "ou",
     info_title: "Informations",
-    phone: "06 21 37 03 73",
-    location: "Arras, Hauts-de-France",
+    phone: "0049 1521 9507682",
+    location: "Mainz, Allemagne",
     hours: "12h00 - 21h00, 7j/7",
   },
   cart: {
@@ -155,7 +155,7 @@
     order_number: "Numero de commande",
   },
   footer: {
-    tagline: "L'Art du Braise Authentique a Arras.",
+    tagline: "L'Art de la cuisine Authentique a Mainz.",
     links_title: "Liens Rapides",
     contact_title: "Contact",
     legal: "Mentions Legales",

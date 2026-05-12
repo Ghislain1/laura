@@ -111,8 +111,8 @@ export const de = {
     send_email: 'Per E-Mail senden',
     or: 'oder',
     info_title: 'Informationen',
-    phone: '06 21 37 03 73',
-    location: 'Mainz, Hauts-de-France',
+    phone: '+49 1521 9507682',
+    location: 'Mainz, Deutschland',
     hours: '12:00 - 21:00 Uhr, 7 Tage die Woche',
   },
   cart: {

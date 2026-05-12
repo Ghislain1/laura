@@ -111,8 +111,8 @@
     send_email: 'Send by Email',
     or: 'or',
     info_title: 'Information',
-    phone: '06 21 37 03 73',
-    location: 'Arras, Hauts-de-France',
+    phone: '+49 1521 9507682',
+    location: 'Mainz, Germany',
     hours: '12:00 PM - 9:00 PM, 7 days/7',
   },
   cart: {
@@ -155,7 +155,7 @@
     order_number: 'Order number',
   },
   footer: {
-    tagline: 'The Art of Authentic Braising in Arras.',
+    tagline: 'The Art of Authentic Braising in Mainz.',
     links_title: 'Quick Links',
     contact_title: 'Contact',
     legal: 'Legal Notice',
