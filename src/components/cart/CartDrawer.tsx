@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { X, Minus, Plus, ShoppingBag, ArrowRight, Flame } from 'lucide-react';
+import { X, Minus, Plus, ShoppingBag, ArrowRight, Flower2 } from 'lucide-react';
 import { useCart } from '../../hooks/useCart';
 import { formatPrice } from '../../lib/utils';
 import { CheckoutFlow } from './CheckoutFlow';
@@ -128,7 +128,7 @@ export function CartDrawer() {
                       {upsellProducts.length > 0 && (
                         <div className="mt-4 pt-4 border-t border-[hsl(0_0%_12%)]">
                           <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[hsl(0_0%_45%)]">
-                            <Flame className="h-3.5 w-3.5 text-(--color-main)" />
+                            <Flower2 className="h-3.5 w-3.5 text-(--color-main)" />
                             {t('cart.upsell')}
                           </p>
                           <div className="flex flex-col gap-2">

@@ -1,5 +1,5 @@
 ﻿import { useTranslation } from 'react-i18next';
-import { Flame } from 'lucide-react';
+import { Flower2 } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
 
 export function About() {
@@ -58,7 +58,7 @@ export function About() {
             <div className="mt-6 space-y-4 text-[hsl(0_0%_60%)] leading-relaxed">
               <p>{t('about.story1')}</p>
               <p className="flex items-start gap-2">
-                <Flame className="mt-1 h-4 w-4 shrink-0 text-(--color-main)" />
+                <Flower2 className="mt-1 h-4 w-4 shrink-0 text-(--color-main)" />
                 {t('about.story2')}
               </p>
               <p className="text-[hsl(0_0%_75%)] font-medium">{t('about.story3')}</p>

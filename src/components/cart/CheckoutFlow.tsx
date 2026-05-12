@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CheckCircle, CreditCard, MessageCircle, Flame } from 'lucide-react';
+import { ArrowLeft, CheckCircle, CreditCard, MessageCircle, Flower2 } from 'lucide-react';
 import { useCart } from '../../hooks/useCart';
 import { formatPrice } from '../../lib/utils';
 import { cn } from '../../lib/utils';
@@ -166,7 +166,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                     </div>
                   </div>
                   <p className="mt-3 flex items-center gap-1.5 text-xs text-[hsl(0_0%_45%)]">
-                    <Flame className="h-3.5 w-3.5 text-(--color-main)" />
+                    <Flower2 className="h-3.5 w-3.5 text-(--color-main)" />
                     {t('checkout.secure')}
                   </p>
                 </div>

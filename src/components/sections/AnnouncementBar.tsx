@@ -1,5 +1,5 @@
 ﻿import { useTranslation } from 'react-i18next';
-import { Flame } from 'lucide-react';
+import { Flower2 } from 'lucide-react';
 
 export function AnnouncementBar() {
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ export function AnnouncementBar() {
       <div className="flex animate-[marquee_22s_linear_infinite]" style={{ width: 'max-content' }}>
         {doubled.map((text, i) => (
           <span key={i} className="flex items-center gap-3 px-8 text-sm font-medium text-[hsl(0_0%_65%)] whitespace-nowrap">
-            <Flame className="h-3.5 w-3.5 shrink-0 text-(--color-main)" />
+            <Flower2 className="h-3.5 w-3.5 shrink-0 text-(--color-main)" />
             {text}
           </span>
         ))}

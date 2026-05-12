@@ -1,5 +1,5 @@
 ﻿import { useTranslation } from 'react-i18next';
-import { Flame, Phone, MapPin, Clock, Share2, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, Clock, Share2, MessageCircle, Flower2 } from 'lucide-react';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -19,10 +19,10 @@ export function Footer() {
           <div>
             <div className="mb-4 flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-(--color-main)">
-                <Flame className="h-5 w-5 text-black" />
+                <Flower2 className="h-5 w-5 text-black" />
               </div>
               <span className="font-display text-2xl text-white">
-                O<span className="text-(--color-main)">Braise</span>
+                L-<span className="text-(--color-main)">Cuisine</span>
               </span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-[hsl(0_0%_55%)]">

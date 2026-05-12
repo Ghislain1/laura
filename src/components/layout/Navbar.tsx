@@ -1,6 +1,6 @@
 ﻿import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ShoppingCart, Menu, X, Flame, Globe } from 'lucide-react';
+import { ShoppingCart, Menu, X, Flower2, Globe } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import { useCart } from '../../hooks/useCart';
 import { cn } from '../../lib/utils';
@@ -71,7 +71,7 @@ export function Navbar() {
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2 group">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-(--color-main)">
-              <Flame className="h-5 w-5 text-black" />
+              <Flower2 className="h-5 w-5 text-black" />
             </div>
             <span className="font-display text-2xl tracking-wide text-white">
               L-<span className="text-(--color-main)">Cuisine</span>
