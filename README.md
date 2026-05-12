@@ -1,6 +1,6 @@
 # L-Cuisine
 
-> L'Art du Braise Authentique — A modern restaurant landing page for a charcoal-grilled cuisine delivery service in Arras.
+> L'Art du Braise Authentique — A modern restaurant landing page for a charcoal-grilled cuisine delivery service in Mainz.
 
 ## Tech Stack
 

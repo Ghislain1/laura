@@ -141,8 +141,8 @@ export const testimonials: Testimonial[] = [
     id: 't4',
     name: 'Ibrahima D.',
     rating: 5,
-    comment: 'Enfin une vraie cuisine africaine a Arras ! Le tilapia est parfaitement braise, la sauce piment est au niveau. Livraison rapide, packaging soigne. 5 etoiles meritees.',
-    commentEn: 'Finally a real African restaurant in Arras! The tilapia is perfectly braised, the chilli sauce is spot on. Fast delivery, careful packaging. 5 stars well deserved.',
+    comment: 'Enfin une vraie cuisine africaine a Mainz ! Le tilapia est parfaitement braise, la sauce piment est au niveau. Livraison rapide, packaging soigne. 5 etoiles meritees.',
+    commentEn: 'Finally a real African restaurant in Mainz! The tilapia is perfectly braised, the chilli sauce is spot on. Fast delivery, careful packaging. 5 stars well deserved.',
     date: '2024-03-05',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80',
   },
@@ -162,8 +162,8 @@ export const faqItems: FaqItem[] = [
     id: 'f1',
     question: 'Dans quelles zones livrez-vous ?',
     questionEn: 'Which areas do you deliver to?',
-    answer: 'Nous livrons principalement a Arras et ses environs dans un rayon de 15 km. Les zones incluses sont : Arras centre, Saint-Nicolas-lez-Arras, Beaurains, Achicourt, Dainville, Agny et Anzin-Saint-Aubin.',
-    answerEn: 'We mainly deliver to Arras and its surroundings within a 15 km radius. Included areas: Arras centre, Saint-Nicolas-lez-Arras, Beaurains, Achicourt, Dainville, Agny and Anzin-Saint-Aubin.',
+    answer: 'Nous livrons principalement a Mainz et ses environs dans un rayon de 15 km. Les zones incluses sont : Mainz centre, Saint-Nicolas-lez-Mainz, Beaurains, Achicourt, Dainville, Agny et Anzin-Saint-Aubin.',
+    answerEn: 'We mainly deliver to Mainz and its surroundings within a 15 km radius. Included areas: Mainz centre, Saint-Nicolas-lez-Mainz, Beaurains, Achicourt, Dainville, Agny and Anzin-Saint-Aubin.',
   },
   {
     id: 'f2',
@@ -203,8 +203,8 @@ export const faqItems: FaqItem[] = [
 ];
 
 export const deliveryZones: DeliveryZone[] = [
-  { name: 'Arras Centre', price: 0, minOrder: 30, time: '25-35 min' },
-  { name: 'Saint-Nicolas-lez-Arras', price: 2, minOrder: 25, time: '30-40 min' },
+  { name: 'Mainz Centre', price: 0, minOrder: 30, time: '25-35 min' },
+  { name: 'Saint-Nicolas-lez-Mainz', price: 2, minOrder: 25, time: '30-40 min' },
   { name: 'Beaurains', price: 2, minOrder: 25, time: '30-40 min' },
   { name: 'Achicourt', price: 2, minOrder: 25, time: '30-40 min' },
   { name: 'Dainville', price: 3, minOrder: 20, time: '35-45 min' },

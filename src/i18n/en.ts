@@ -10,7 +10,7 @@
   hero: {
     badge: 'The Art of Authentic Braising',
     title: 'The Taste\nof Fire',
-    subtitle: 'Fish and chicken braised over charcoal, delivered fresh to Arras and surroundings.',
+    subtitle: 'Fish and chicken braised over charcoal, delivered fresh to Mainz and surroundings.',
     cta_order: 'Order Now',
     cta_discover: 'Discover the Menu',
     scroll: 'Discover',
@@ -19,7 +19,7 @@
     text1: 'Delivery from 12:00 PM',
     text2: 'Minimum order 15 euros',
     text3: 'Free delivery over 30 euros',
-    text4: 'Delivery area: Arras and surroundings',
+    text4: 'Delivery area: Mainz and surroundings',
     text5: 'Dishes prepared to order',
     text6: 'Charcoal braised',
   },
@@ -45,7 +45,7 @@
   about: {
     badge: 'Our Story',
     title: 'The Art of\nBraising',
-    story1: 'L-Cuisine was born from a passion for authentic African cuisine and the desire to share this unique culinary art with the people of Arras.',
+    story1: 'L-Cuisine was born from a passion for authentic African cuisine and the desire to share this unique culinary art with the people of Mainz.',
     story2: 'Here, nothing is left to chance. Every dish is prepared with respect for the art of braising: the fire, the time, the marinade, the charcoal.',
     story3: 'The result? Generous, flavorful and convivial cuisine, made for pure pleasure.',
     stat1_value: '100%',

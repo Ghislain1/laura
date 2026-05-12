@@ -8,9 +8,9 @@
     cart: 'Panier',
   },
   hero: {
-    badge: "L'Art du Braise Authentique",
+    badge: "L'Art de la cuisine africaine Authentique",
     title: "Le Gout\ndu Feu",
-    subtitle: "Poissons et poulets braises au charbon de bois, livres frais a Arras et environs.",
+    subtitle: "Poissons et poulets braises au charbon de bois, livres frais a Mainz et environs.",
     cta_order: "Commander Maintenant",
     cta_discover: "Decouvrir le Menu",
     scroll: "Decouvrir",
