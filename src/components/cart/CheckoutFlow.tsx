@@ -192,7 +192,7 @@ export function CheckoutFlow({ onBack, onClose }: Props) {
                   <p className="mt-1 font-display text-2xl text-(--color-main)">#{orderNum}</p>
                 </div>
                 <a
-                  href={'https://wa.me/33621370373?text=' + encodeURIComponent('Bonjour L-Cuisine ! Commande #' + orderNum)}
+                  href={'https://wa.me/4915219507682?text=' + encodeURIComponent('Bonjour L-Cuisine ! Commande #' + orderNum)}
                   target="_blank"
                   rel="noreferrer"
                   className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25d366] py-3.5 font-semibold text-white"

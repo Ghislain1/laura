@@ -62,7 +62,7 @@ export function Delivery() {
             </div>
 
             <a
-              href="https://wa.me/33621370373"
+              href="https://wa.me/4915219507682"
               target="_blank"
               rel="noreferrer"
               className="mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#25d366] py-4 text-base font-semibold text-white transition-opacity hover:opacity-90"

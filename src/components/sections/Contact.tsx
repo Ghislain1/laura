@@ -1,6 +1,6 @@
 ﻿import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MessageCircle, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { MessageCircle, MapPin, Clock, Send } from 'lucide-react';
 import { FadeIn, SectionBadge } from '../effects/FadeIn';
 
 export function Contact() {
@@ -16,7 +16,7 @@ export function Contact() {
   };
 
   const infos = [
-    { icon: Phone, valueKey: 'contact.phone' },
+    { icon: MessageCircle, valueKey: 'contact.phone', href: 'https://wa.me/4915219507682' },
     { icon: MapPin, valueKey: 'contact.location' },
     { icon: Clock, valueKey: 'contact.hours' },
   ];
@@ -107,14 +107,31 @@ export function Contact() {
             <div className="lg:pl-8">
               <h3 className="mb-6 font-semibold text-white">{t('contact.info_title')}</h3>
               <div className="space-y-5">
-                {infos.map((info) => (
-                  <div key={info.valueKey} className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-(--color-main)/15">
-                      <info.icon className="h-5 w-5 text-(--color-main)" />
+                {infos.map((info) => {
+                  const content = (
+                    <>
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-(--color-main)/15">
+                        <info.icon className="h-5 w-5 text-(--color-main)" />
+                      </div>
+                      <span className="text-sm text-[hsl(0_0%_65%)]">{t(info.valueKey)}</span>
+                    </>
+                  );
+                  return info.href ? (
+                    <a
+                      key={info.valueKey}
+                      href={info.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-4 transition-opacity hover:opacity-80"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div key={info.valueKey} className="flex items-center gap-4">
+                      {content}
                     </div>
-                    <span className="text-sm text-[hsl(0_0%_65%)]">{t(info.valueKey)}</span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               <div

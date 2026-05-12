@@ -39,7 +39,7 @@ export function Footer() {
                 <Share2 className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/33621370373"
+                href="https://wa.me/4915219507682"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
