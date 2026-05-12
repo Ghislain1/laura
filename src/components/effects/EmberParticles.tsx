@@ -14,8 +14,8 @@ interface Ember {
 const COLORS = [
   'var(--color-main)',
   'hsl(354 79% 46%)',
-  'hsl(38 100% 55%)',
-  'hsl(14 100% 55%)',
+  'hsl(30, 13%, 9%)',
+  'hsl(15, 17%, 91%)',
 ];
 
 function createEmbers(count: number): Ember[] {
@@ -24,7 +24,7 @@ function createEmbers(count: number): Ember[] {
     id: i,
     x: Math.random() * 100,
     size: Math.random() * 4 + 2,
-    duration: Math.random() * 3 + 2.5,
+    duration: Math.random() * 3 + 12.5,
     delay: Math.random() * 4,
     xDrift: (Math.random() - 0.5) * 80,
     color: COLORS[Math.floor(Math.random() * COLORS.length)],

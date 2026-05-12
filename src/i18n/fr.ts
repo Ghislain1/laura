@@ -18,10 +18,10 @@
   announcement: {
     text1: "Livraison a partir de 12h00",
     text2: "Commande minimum 15 euros",
-    text3: "Livraison gratuite a partir de 30 euros",
-    text4: "Zone de livraison : Arras et environs",
+    text3: "Livraison gratuite a partir de 50 euros",
+    text4: "Zone de livraison : Mayence et environs",
     text5: "Plats prepares a la commande",
-    text6: "Braise au charbon de bois",
+    text6: "Juis fait maison gratuit a partir de 100 euros",
   },
   menu: {
     title: "Notre Menu",
@@ -43,10 +43,10 @@
     close: "Fermer",
   },
   about: {
-    badge: "Notre Histoire",
-    title: "L'Art du\nBraise",
-    story1: "L-Cuisine est ne d'une passion pour la cuisine africaine authentique et du desir de partager cet art culinaire unique avec les habitants d'Arras.",
-    story2: "Ici, rien n'est laisse au hasard. Chaque plat est prepare dans le respect de l'art du braise : le feu, le temps, la marinade, le charbon.",
+    badge: "Mon Histoire",
+    title: "L'Art de la\nCuisine africaine",
+    story1: "L-Cuisine est d'une passion pour la cuisine africaine authentique et du desir de partager cet art culinaire unique avec les habitants de Mayence et environ.",
+    story2: "Ici, rien n'est laisse au hasard. Chaque plat est prepare dans le respect de l'art de la cuisne africaine : le feu, le temps, la marinade, l'amour'.",
     story3: "Le resultat ? Une cuisine genereuse, savoureuse et conviviale, pensee pour le plaisir.",
     stat1_value: "100%",
     stat1_label: "Fait Maison",
