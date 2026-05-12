@@ -2,6 +2,7 @@
 import { initReactI18next } from 'react-i18next';
 import { fr } from './fr';
 import { en } from './en';
+import { de } from './de';
 
 i18n
   .use(initReactI18next)
@@ -9,6 +10,7 @@ i18n
     resources: {
       fr: { translation: fr },
       en: { translation: en },
+      de: { translation: de },
     },
     lng: 'fr',
     fallbackLng: 'fr',

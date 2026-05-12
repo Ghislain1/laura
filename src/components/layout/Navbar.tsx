@@ -48,8 +48,11 @@ export function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  const langs = ['fr', 'en', 'de'];
+
   const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr');
+    const idx = langs.indexOf(i18n.language);
+    i18n.changeLanguage(langs[(idx + 1) % langs.length]);
   };
 
   return (
@@ -169,7 +172,7 @@ export function Navbar() {
                   className="flex items-center gap-1.5 rounded-full border border-[hsl(0_0%_20%)] px-3 py-1.5 text-xs text-[hsl(0_0%_65%)]"
                 >
                   <Globe className="h-3.5 w-3.5" />
-                  {i18n.language === 'fr' ? 'EN' : 'FR'}
+                  {i18n.language.toUpperCase()}
                 </button>
                 <a
                   href="#menu"

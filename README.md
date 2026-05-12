@@ -66,3 +66,17 @@ src/
 ├── lib/             # Utility helpers
 └── types/           # Shared TypeScript interfaces
 ```
+
+# Deploy 
+- Deploy a React SPA automatically
+- Todos:
+  - Create a Netlify Site
+    - Site ID
+    - Auth Token
+  - Add GitHub Secrets
+    - Settings -> Secrets and variables -> Actions
+    - NETLIFY_AUTH_TOKEN
+    - NETLIFY_SITE_ID
+  - Create GitHub Actions YAML
+    - Call it deploy.yml
+    -  netlify-cli is used as npm
