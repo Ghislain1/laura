@@ -100,6 +100,10 @@ export function Footer() {
             <a href="#" className="text-xs text-[hsl(0_0%_40%)] hover:text-white">
               {t('footer.privacy')}
             </a>
+            <p className="text-xs text-[hsl(0_0%_40%)] hover:text-white">
+              Created by <a href="https://ghislain1.github.io./home" rel="noreferrer" target="_blank"
+                className="text-green-400">Ghislain Z.</a>
+            </p>
           </div>
         </div>
       </div>
