@@ -12,7 +12,7 @@ export function Contact() {
     const text = encodeURIComponent(
       'Bonjour L-Cuisine !\n\nNom: ' + form.name + '\nEmail: ' + form.email + '\n\nMessage:\n' + form.message
     );
-    window.open('https://wa.me/33621370373?text=' + text, '_blank');
+    window.open('https://wa.me/4915219507682?text=' + text, '_blank');
   };
 
   const infos = [
